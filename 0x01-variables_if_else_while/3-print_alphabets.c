@@ -10,22 +10,17 @@ int main(void)
 {
 char letter;
 int i;
-string ans;
 
 for (i = 'a'; i <= 'z'; i++)
 {
-letter = i;
-ans = ans + letter;
+putchar(i);
 }
 
-for (i = 'a'; i <= 'z'; i++)
+for (i = 'A'; i <= 'Z'; i++)
 {
-letter = toupper(i);
-ans = ans + letter;
+putchar(i);
 }
 
-putchar('ans');
-putchar('$');
 putchar('\n');
 return (0);
 
