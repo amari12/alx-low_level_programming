@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -15,15 +16,15 @@ n = rand() - RAND_MAX / 2;
 /* your code goes there */
 if (n > 0)
 {
-printf("%f is positive\n", n);
+printf("%i is positive\n", n);
 }
 else if (n < 0)
 {
-printf("%f is negative\n", n);
+printf("%i is negative\n", n);
 }
 else
 {
-printf("%f is zero\n", n);
+printf("%i is zero\n", n);
 }
 return (0);
 }
