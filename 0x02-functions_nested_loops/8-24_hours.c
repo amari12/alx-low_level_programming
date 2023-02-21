@@ -9,16 +9,25 @@ void jack_bauer(void)
 {
 int h;
 int m;
+ int h1;
+ int h2;
+ int m1;
+ int m2;
 
-for (h = 00; h < 24; h++)
+for (h = 0; h <= 23; h++)
 {
-for (m = 00; m < 60; m++)
+for (m = 0; m <= 23; m++)
 {
-_putchar(h / 10);
-_putchar(h % 10);
+  h1 = h / 10;
+  h2 = h % 10;
+  m1 = m / 10;
+  m2 = m % 10;
+  
+_putchar(h1);
+_putchar(h2);
 _putchar(':');
-_putchar(m / 10);
-_putchar(m % 10);
+_putchar(m1);
+_putchar(m2);
 }
 _putchar('\n');
 }
