@@ -18,7 +18,7 @@ for (c = n; c <= 98; c++)
 printf("%i, ", c);
 }
 }
-else if (n < 98)
+else if (n > 98)
 {
 for (c = n; n >= 98; c--)
 {
@@ -27,6 +27,6 @@ printf("%i, ", c);
 }
 else
 {
-printf("%i \\n", n);
+printf("%i %c", n, '\n');
 }
 }
