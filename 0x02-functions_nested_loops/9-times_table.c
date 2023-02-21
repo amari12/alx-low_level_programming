@@ -17,6 +17,8 @@ for (c = 0; c < 10; c++)
 {
 v = c * r;
 _putchar(v);
+_putchar(',');
+_putchar(' ');
 }
 _putchar('\n');
 }
