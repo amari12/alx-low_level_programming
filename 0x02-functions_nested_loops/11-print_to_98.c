@@ -27,7 +27,7 @@ printf("%d, ", c);
 }
 else
 {
-printf("%d ,", n);
+printf("%d", n);
 }
 _putchar('\n');
 }
