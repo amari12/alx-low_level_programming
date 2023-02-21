@@ -23,11 +23,11 @@ h2 = h % 10;
 m1 = m / 10;
 m2 = m % 10;
 
-_putchar(h1);
-_putchar(h2);
+_putchar(h1 + '0');
+_putchar(h2 + '0');
 _putchar(':');
-_putchar(m1);
-_putchar(m2);
+_putchar(m1 + '0');
+_putchar(m2 + '0');
 }
 _putchar('\n');
 }
