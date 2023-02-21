@@ -13,20 +13,21 @@ int c;
 
 if (n < 98)
 {
-for (c = n; c == 98; c++)
+for (c = n ; c <= 98 ; c++)
 {
-printf("%i, ", c);
+printf("%d, ", c);
 }
 }
 else if (n > 98)
 {
-for (c = n; n == 98; c--)
+for (c = n ; n >= 98 ; c--)
 {
-printf("%i, ", c);
+printf("%d, ", c);
 }
 }
 else
 {
-printf("%i %c", n, '\n');
+printf("%d ,", n);
 }
+_putchar('\n');
 }
