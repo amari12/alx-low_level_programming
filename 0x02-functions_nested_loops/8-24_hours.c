@@ -14,9 +14,9 @@ int h2;
 int m1;
 int m2;
 
-for (h = 0; h <= 23; h++)
+for (h = 0; h <= 59; h++)
 {
-for (m = 0; m <= 23; m++)
+for (m = 0; m <= 59; m++)
 {
 h1 = h / 10;
 h2 = h % 10;
