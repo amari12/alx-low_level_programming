@@ -21,7 +21,7 @@ v = col * row;
 
 if (col < 10)
 /* not last number in row*/
-printf("%d, ", v);
+printf("%d,\t", v);
 else
 printf("%d\n", v);
 }
