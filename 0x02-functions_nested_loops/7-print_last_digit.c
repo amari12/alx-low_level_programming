@@ -15,9 +15,9 @@ last = i % 10;
 if (last < 0)
 last = last * -1;
 
-/* add '0') to make it work as a char */
-_putchar(last + '0');
-_putchar(last + '0');
+/* add '0') to make it work as a char? */
+_putchar(last);
+_putchar(last);
 
 return (0);
 }
