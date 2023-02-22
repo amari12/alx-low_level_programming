@@ -15,7 +15,7 @@ int v;
 for (row = 0; row <= 9; row++)
 {
 
-for (col = 0; col < 9; col++)
+for (col = 0; col <= 9; col++)
 {
 v = col * row;
 
