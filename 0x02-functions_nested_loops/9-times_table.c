@@ -1,4 +1,6 @@
 #include "main.h"
+#include <unistd.h>
+#include <stdio.h>
 
 /**
  *times_table - print the 9 times table
@@ -7,20 +9,33 @@
 
 void times_table(void)
 {
-int r;
-int c;
+int row;
+int col;
 int v;
 
-for (r = 0; r < 10; r++)
+for (row = 0; row <= 10; row++)
 {
-for (c = 0; c < 10; c++)
+for (col = 0; col <= 10; col++)
 {
-v = c * r;
-_putchar(v);
-_putchar(',');
-_putchar(' ');
+v = col * row;
+while (col < 10)
+{ /* not last number in row*/
+/*
+*write uses <unistd>
+*write(v);
+*/
+printf("%d, ", v);
 }
-_putchar('\n');
+/*
+ *_putchar(',');
+ *_putchar(' ');
+ */
+printf("%d\n", v);
+}
+/*
+* new line after each row
+*_putchar('\n');
+*/
 }
 
 }
