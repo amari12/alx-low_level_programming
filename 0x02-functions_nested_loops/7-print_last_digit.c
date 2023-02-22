@@ -8,11 +8,11 @@
 
 int print_last_digit(int i)
 {
-int last;
+char last;
 
 last = i % 10;
 /* if the number is negative */
-if (last < 0)
+if (last < '0')
 last = last * -1;
 
 /* add '0') to make it work as a char? */
