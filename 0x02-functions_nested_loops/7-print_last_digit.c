@@ -17,10 +17,5 @@ last = (i % 10) * -1;
 else
 last = i % 10;
 
-/* add '0') to make it work as a char? */
-printf("%d", last);
-printf("%d", last);
-/*_putchar('0' + last);*/
- 
-return (0);
+return (last);
 }
