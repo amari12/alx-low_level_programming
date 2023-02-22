@@ -11,25 +11,20 @@ void print_to_98(int n)
 {
 int c;
 
-if (n < 98)
+if (n <= 98)
 {
-for (c = n ; c < 98 ; c++)
-{
-printf("%d, ", c);
-printf("%d", 98);
+c = n;
+while (c < 98)
+printf("%d, ", c--);
+printf("%d\n", c);
 }
-}
+
 else if (n > 98)
 {
-for (c = n ; n > 98 ; c--)
-{
-printf("%d, ", c);
-printf("%d", 98);
+c = n;
+while (c > 98)
+printf("%d, ", c--);
+printf("%d\n", c);
 }
-}
-else
-{
-printf("%d", n);
-}
-_putchar('\n');
+
 }
