@@ -11,15 +11,15 @@ int print_last_digit(int i)
 {
 int last;
 
-last = i % 10;
-
 /* if the number is negative */
 if (i < '0')
-last = last * -1;
+last = (i % 10) * -1;
+else
+last = i % 10;
 
 /* add '0') to make it work as a char? */
-printf("%d", last);
-/*_putchar(last + '0');*/
+/*printf("%d", last);*/
+_putchar('0' + last);
 
 return (0);
 }
