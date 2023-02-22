@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_last_digit - prints last digit of number
@@ -17,7 +18,7 @@ if (i < '0')
 last = last * -1;
 
 /* add '0') to make it work as a char? */
-_putchar(last + '0');
+printf("%d", last);
 /*_putchar(last + '0');*/
 
 return (0);
