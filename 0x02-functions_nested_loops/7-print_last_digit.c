@@ -18,9 +18,9 @@ else
 last = i % 10;
 
 /* add '0') to make it work as a char? */
-/*printf("%d", last);*/
-_putchar('0' + last);
-_putchar('0' + last);
+printf("%d", last);
+printf("%d", last);
+/*_putchar('0' + last);*/
  
 return (0);
 }
