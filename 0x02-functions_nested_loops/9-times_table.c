@@ -1,5 +1,4 @@
 #include "main.h"
-#include <unistd.h>
 #include <stdio.h>
 
 /**
@@ -13,29 +12,20 @@ int row;
 int col;
 int v;
 
-for (row = 0; row <= 10; row++)
+for (row = 0; row < 11; row++)
 {
-for (col = 0; col <= 10; col++)
+
+for (col = 0; col < 11; col++)
 {
 v = col * row;
-while (col < 10)
-{ /* not last number in row*/
-/*
-*write uses <unistd>
-*write(v);
-*/
+
+if (col < 10)
+/* not last number in row*/
 printf("%d, ", v);
-}
-/*
- *_putchar(',');
- *_putchar(' ');
- */
+else
 printf("%d\n", v);
 }
-/*
-* new line after each row
-*_putchar('\n');
-*/
+
 }
 
 }
