@@ -12,7 +12,7 @@ int print_last_digit(int i)
 int last;
 
 /* if the number is negative */
-if (i < '0')
+if (i < 0)
 last = (i % 10) * -1;
 else
 last = i % 10;
