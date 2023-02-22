@@ -19,6 +19,6 @@ last = (i % 10) * -1;
 else
 last = i % 10;
 
-printf("%d", last);
+_putchar(last + '0');
 return (last);
 }
