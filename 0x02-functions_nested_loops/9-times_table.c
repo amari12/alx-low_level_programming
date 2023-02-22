@@ -22,7 +22,7 @@ v = col * row;
 if (col < 10 && v < 10)
 /* not last number in row and only one digit*/
 printf("%d,  ", v);
- else if (col == 10)
+else if (col == 10)
 printf("%d\n", v);
 else if (col < 10 && v >= 10)
 printf("%d, ", v);
