@@ -8,7 +8,7 @@
 
 int print_last_digit(int i)
 {
-char last;
+int last;
 
 last = i % 10;
 
@@ -18,7 +18,7 @@ last = last * -1;
 
 /* add '0') to make it work as a char? */
 _putchar(last + '0');
-/*_putchar(last);*/
+_putchar(last + '0');
 
 return (0);
 }
