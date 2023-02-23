@@ -1,12 +1,12 @@
 #include <stdio.h>
-/*#include "main.h"*/
+#include "main.h"
 
 /**
- *fizzbuzz - test
+ *fizz_buzz - test
  *Return: 0
  */
 
-int main()
+int main(void)
 {
 int i;
 int a;
@@ -24,7 +24,7 @@ else if (b == 0)
 printf("Buzz ");
 else
 printf("%d ", i);
-
 }
+printf("\n");
 return (0);
 }
