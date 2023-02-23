@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include "main.h"
+/*#include "main.h"*/
 
 /**
  *fizzbuzz - test
- *Return: void
+ *Return: 0
  */
 
-void fizz_buzz(void)
+int main()
 {
 int i;
 int a;
@@ -26,4 +26,5 @@ else
 printf("%d ", i);
 
 }
+return (0);
 }
