@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- *isupper - retrun 1 if c is uppercase and 0 otherwise
+ *_isupper - retrun 1 if c is uppercase and 0 otherwise
+ *@c: given character
  *Return: int
  */
 
