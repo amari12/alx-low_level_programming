@@ -13,12 +13,12 @@ int i;
 int len;
 int h;
 
-len = strlen(str);
+len = strlen(str) - 1;
 h = (strlen(str) - 1) / 2;
 
 if (len % 2 == 0)
 {
-for (i = len / 2; i < len; i++)
+  for (i = (len / 2); i < len; i++)
 _putchar(str[i]);
 }
 else
