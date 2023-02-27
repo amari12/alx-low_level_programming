@@ -9,16 +9,21 @@
 
 void rev_string(char *s)
 {
-char r[10];
+char hold;
 int i;
-int j;
+int len;
+int halfway;
+int back;
 
-j = 0;
-for (i = strlen(s) - 1; i >= 0; i--)
+len = strlen(s);
+halfway = len / 2;
+back = len - 1;
+
+for (i = 0; i < halfway; i++)
 {
-r[j] = s[i];
-j++;
+hold = s[i];
+s[i] = s[back];
+s[back] = hold;
+back--;
 }
-r[strlen(s)] = '\n';
-
 }
