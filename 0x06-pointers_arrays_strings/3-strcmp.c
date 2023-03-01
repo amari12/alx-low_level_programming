@@ -13,15 +13,17 @@ int _strcmp(char *s1, char *s2)
 int result;
 int len1;
 int len2;
+int total;
 
 len1 = strlen(s1);
 len2 = strlen(s2);
 result = len1 - len2;
+total = len1 + len2;
 
 if (result < 0)
-return (-15);
+return (-total);
 else if (result > 0)
-return (15);
+return (total);
 else
 return (0);
 
