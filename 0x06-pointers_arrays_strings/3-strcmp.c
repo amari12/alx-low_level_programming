@@ -18,7 +18,7 @@ int total;
 len1 = strlen(s1);
 len2 = strlen(s2);
 result = len1 - len2;
-total = len1 + len2;
+total = sizeof(s1) + sizeof(s2) - 1;
 
 if (result < 0)
 return (-total);
