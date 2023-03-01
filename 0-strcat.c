@@ -19,7 +19,7 @@ dest_len = strlen(dest);
 src_len = strlen(src);
 p = 0;
 
-for (i = dest_len - 1; i <= dest_len + src_len - 1; i++)
+for (i = dest_len; i <= dest_len + src_len - 1; i++)
 {
 dest[i] = src[p];
 p++;
