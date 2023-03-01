@@ -24,16 +24,4 @@ hold = a[i];
 a[i] = a[n - i - 1];
 a[n - i - 1] = hold;
 }
-/*}*/
-/**
- *else
- *{
- *for (i = 0; i < halfway; i++)
- *{
- *hold = a[i];
- *a[i] = a[n - i];
- *a[n - i] = hold;
- *}
- *}
- */
 }
