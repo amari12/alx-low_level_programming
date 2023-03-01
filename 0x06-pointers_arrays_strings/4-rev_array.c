@@ -14,10 +14,7 @@ int hold;
 int halfway;
 
 halfway = n / 2;
-/**
- *if (n % 2 == 0)
- *{
- */
+
 for (i = 0; i < halfway; i++)
 {
 hold = a[i];
