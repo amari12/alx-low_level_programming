@@ -23,7 +23,7 @@ for (is = 0; is <= lens; is++)
 for (ia = 0; ia <= lena; ia++)
 {
 if (s[is] == accept[ia])
-return (s + 1);
+return (&s[is]);
 }
 }
 return ('\0');
