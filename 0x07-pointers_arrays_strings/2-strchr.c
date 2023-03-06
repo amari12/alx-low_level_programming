@@ -14,7 +14,7 @@ int i;
 int len;
 
 len = strlen(s);
-for (i = 0; i < len; i++)
+for (i = 0; i <= len; i++)
 {
 if (s[i] == c)
 return (&s[i]);
