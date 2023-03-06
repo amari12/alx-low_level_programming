@@ -21,16 +21,16 @@ lena = strlen(accept);
 match = 0;
 ia = 0;
 is = 0;
+
 while (is < lens && match != 1)
 {
 while (ia < lena && match != 1)
 {
 if (s[is] == accept[ia])
 match = 1;
-else (s[is] != accept[ia])
 ia++;
 }
 is++;
 }
-return (s[ia]);
+return (&s[ia]);
 }
