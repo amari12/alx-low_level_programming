@@ -14,23 +14,17 @@ int is;
 int ia;
 int lens;
 int lena;
-int match;
 
 lens = strlen(s);
 lena = strlen(accept);
-match = 0;
-ia = 0;
-is = 0;
 
-while (is < lens && match != 1)
+for (is = 0; is <= lens; is++)
 {
-while (ia < lena && match != 1)
+for (ia = 0; ia <= lena; ia++)
 {
 if (s[is] == accept[ia])
-match = 1;
-ia++;
+return (s + 1);
 }
-is++;
 }
-return (&s[ia]);
+return ('\0');
 }
