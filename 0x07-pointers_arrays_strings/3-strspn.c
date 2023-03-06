@@ -20,11 +20,11 @@ lena = strlen(accept);
 
 for (is = 0; is < lens; is++)
 {
-for (ia = 0; is < lena; ia++)
+for (ia = 0; ia < lena; ia++)
 {
 if (s[is] == accept[ia])
-return (is + 1);
+break;
 }
 }
-return (0);
+return (is);
 }
