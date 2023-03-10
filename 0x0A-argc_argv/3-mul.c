@@ -11,8 +11,8 @@
 
 int main(int argc, char *argv[])
 {
-int a;
-int b;
+int a = 0;
+int b = 0;
 
 /*a = atoi(argv[1]);*/
 /*b = atoi(argv[2]);*/
@@ -20,12 +20,11 @@ int b;
 /*a = argv[1] - '0';*/
 /*b = argv[2] - '0';*/
 
-a = strtol(argv[1], NULL, 10);
-b = strtol(argv[2], NULL, 10);
-
 if (argc >= 3)
 {
-printf("%d", (a * b));
+a = atoi(argv[1]);
+b = atoi(argv[2]);
+printf("%d\n", (a * b));
 }
 else
 {
