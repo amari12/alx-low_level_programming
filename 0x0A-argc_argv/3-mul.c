@@ -13,18 +13,14 @@ int main(int argc, char *argv[])
 {
 int a = 0;
 int b = 0;
-
-/*a = atoi(argv[1]);*/
-/*b = atoi(argv[2]);*/
-
-/*a = argv[1] - '0';*/
-/*b = argv[2] - '0';*/
+int mult = 0;
 
 if (argc >= 3)
 {
 a = atoi(argv[1]);
 b = atoi(argv[2]);
-printf("%d\n", (a * b));
+mult = a * b;
+printf("%d\n", mult);
 }
 else
 {
