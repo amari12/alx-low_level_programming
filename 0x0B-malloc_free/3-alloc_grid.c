@@ -12,30 +12,30 @@
 int **alloc_grid(int width, int height)
 {
 int row, col;
-int h = height;
-int w = width;
-int length = h * w;
-int array[height][width];
+int **arr;
 
 /*check if height/width is zero*/
 if (width == 0 || height == 0)
 return (NULL);
 
-int **p = (int **)calloc(length, sizeof(int));
-*p = &array[0][0];
+arr = (int **)malloc(height * sizeof(int));
 
-if (p)
+if (arr)
 {/*check if it worked*/
 /*initialise with 0s*/
 for (row = 0; row < height; row++)
 {
+/*assign each row /1D array a pointer?*/
+arr[row] = (int *)malloc(width * sizeof(int));
+
 for (col = 0; col < width; col++)
 {
-array[row][col] = 0;
+arr[row][col] = 0;
 }
 }
-return (p);
+return (arr);
 }
+
 else
 {/*return null on failure*/
 return (NULL);
