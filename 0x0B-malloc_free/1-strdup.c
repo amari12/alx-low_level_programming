@@ -14,12 +14,12 @@ char *_strdup(char *str)
 int len = strlen(str);
 int i;
 
-if (*str == '\0')
+if (*str == '\0' || str == NULL)
 return ('\0');
 
 else
 {
-char *p = (char *)malloc(len * sizeof(char));
+char *p = (char *)malloc((len * sizeof(char)) + 1);
 
 /*check if succesful*/
 if (p)
