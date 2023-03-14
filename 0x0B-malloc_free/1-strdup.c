@@ -14,8 +14,8 @@ char *_strdup(char *str)
 int len = strlen(str);
 int i;
 
-if (*str == '\0' || str == NULL)
-return ('\0');
+if (str == 0)
+return (NULL);
 
 else
 {
@@ -33,7 +33,7 @@ return (p);
 }
 else
 {
-return ('\0');
+return (NULL);
 }
 }
 
