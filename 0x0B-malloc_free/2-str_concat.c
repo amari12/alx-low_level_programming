@@ -26,18 +26,19 @@ str = malloc((len1 + len2 + 1) * sizeof(char));
 
 if (str)
 {
-for (i = 0; i < (len1 + len2); i++)
-{
-if (i < len1)
+for (i = 0; i < len1; i++)
+{/*first part/string*/
 str[i] = s1[i];
-else if (i >= len1 && i < (len1 + len2))
-str[i] = s2[i];
+}
+for (i = len1; i < len2 + len1; i++)
+{/*2nd part/string*/
+str[i] = s2[i - len1];
 }
 str[i] = '\0';
 
 return (str);
 }
-else
+else /*malloc failed*/
 {
 return (NULL);
 }
