@@ -29,13 +29,19 @@ str = malloc((len1 + len2 + 1) * sizeof(char));
 
 if (str)
 {
+if (len1 > 0)
+{
 for (i = 0; i < len1; i++)
 {/*first part/string*/
 str[i] = s1[i];
 }
+}
+if (len2 > 0)
+{
 for (i = len1; i < len2 + len1; i++)
 {/*2nd part/string*/
 str[i] = s2[i - len1];
+}
 }
 str[i] = '\0';
 
