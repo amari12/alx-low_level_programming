@@ -17,10 +17,10 @@ int len2;
 int i;
 char *str;
 
-if (s1 == NULL)
-s1 = "";
-if (s1 == NULL)
-s2 = "";
+/*if (s1 == NULL)*/
+/*s1 = "";*/
+/*if (s1 == NULL)*/
+/*s2 = "";*/
 
 len1 = strlen(s1);
 len2 = strlen(s2);
@@ -29,14 +29,14 @@ str = malloc((len1 + len2 + 1) * sizeof(char));
 
 if (str)
 {
-if (len1 > 0)
+if (s1)
 {
 for (i = 0; i < len1; i++)
 {/*first part/string*/
 str[i] = s1[i];
 }
 }
-if (len2 > 0)
+if (s2)
 {
 for (i = len1; i < len2 + len1; i++)
 {/*2nd part/string*/
