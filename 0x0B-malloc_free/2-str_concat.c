@@ -15,25 +15,31 @@ char *str_concat(char *s1, char *s2)
 int len1 = strlen(s1);
 int len2 = strlen(s2);
 int i;
+char *str;
 
-char *p = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+if (s1 == NULL)
+s1 = "";
+if (s1 == NULL)
+s2 = "";
 
-if (p)
+str = malloc((len1 + len2 + 1) * sizeof(char));
+
+if (str)
 {
 for (i = 0; i < (len1 + len2); i++)
 {
-if (i > len1)
-p[i] = s2[i];
-else
-p[i] = s1[i];
+if (i < len1)
+str[i] = s1[i];
+else if (i >= len1 && i < (len1 + len2))
+str[i] = s2[i];
 }
-p[i] = '\0';
+str[i] = '\0';
 
-return (p);
+return (str);
 }
 else
 {
-return ('\0');
+return (NULL);
 }
 
 }
