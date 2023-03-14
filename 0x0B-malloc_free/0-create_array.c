@@ -18,11 +18,19 @@ return ('\0');
 else
 {
 char *p = (char *)malloc(size * sizeof(char));
- for (i = 0; i < (int)size; i++)
+
+if (p)
+{
+for (i = 0; i < (int)size; i++)
 {
 p[i] = c;
 }
+}
+else
+{
+return ('\0');
+}
 return (p);
 }
-return ('\0');
+
 }
