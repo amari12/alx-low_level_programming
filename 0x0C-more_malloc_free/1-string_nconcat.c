@@ -25,9 +25,9 @@ if (s2 == NULL)
 s2 = "";
 len1 = strlen(s1);
 len2 = strlen(s2);
-if (n > len2)
+if ((int)n > len2)
 {
-n = len2
+n = len2;
 }
 newlen = len1 + n + 1;
 pointer = malloc(sizeof(char) * newlen);
@@ -42,7 +42,7 @@ for (i = 0; i < len1; i++)
 {
 pointer[i] = s1[i];
 }
-for (i = len1; i < n; i++)
+for (i = len1; i < (int)n; i++)
 {
 pointer[i] = s2[i - len1];
 }
