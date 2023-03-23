@@ -21,8 +21,6 @@ while (format[i])
 {
 if (i == 0)
 sep = "";
-else
-sep = ", ";
 
 switch (format[i])
 {
@@ -45,6 +43,7 @@ default:
 i++;
 continue;
 } /*switch*/
+sep = ", ";
 i++;
 } /*while*/
 printf("\n");
