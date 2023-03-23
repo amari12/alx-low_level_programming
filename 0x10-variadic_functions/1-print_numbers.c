@@ -16,13 +16,12 @@ va_list lst;
 
 va_start(lst, n);
 
-if (separator == NULL)
-separator = " ";
-
 for (i = 0; i < n; i++)
 {
 if (i == n - 1)
 printf("%d\n", va_arg(lst, int));
+else if (separator == NULL)
+printf("%d ", va_arg(lst, int));
 else
 printf("%d%c ", va_arg(lst, int), *separator);
 }
