@@ -19,6 +19,9 @@ size_t n = 0;
 /*assign memory*/
 new = malloc(sizeof(list_t));
 
+if (new == NULL)
+return (NULL);
+
 new->str = strdup(str);
 
 while (str[n]) /*get length*/
