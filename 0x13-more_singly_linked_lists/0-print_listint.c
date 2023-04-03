@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stddef.h>
 
 /**
  *print_listint - prints all elements of list
@@ -14,7 +15,7 @@ size_t size = 0;
 while (h) /*while h exists*/
 {
 size++; /*increment size*/
-printf("%i\n", h->n); /*print int*/
+printf("%d\n", h->n); /*print int*/
 h = h->next; /*move to next node*/
 }
 return (size); /*return size of list*/

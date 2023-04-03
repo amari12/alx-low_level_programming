@@ -1,6 +1,7 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+#include <stddef.h>
 /**
  *struct listint_i - linked list of ints
  *@n: int number
@@ -10,7 +11,7 @@
 /*define struct for list*/
 typedef struct listint_i
 {
-int *n;
+int n;
 struct listint_i *next;
 } listint_t;
 
