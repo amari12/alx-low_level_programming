@@ -11,8 +11,7 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-listint_t *temp, *current = *head, *prev = NULL;
-listint_t *new;
+listint_t *temp, *new, *current = *head, *prev = NULL;
 unsigned int i;
 
 /*assign memory*/
@@ -26,14 +25,14 @@ new->n = n;
 if (*head == NULL && idx == 0)
 {
 *head = new;
+new->next = NULL;
 return (new);
 }
 /*if list empty and idx is not 0*/
 if (*head == NULL && idx != 0)
 return (NULL);
-/*loop through list to find node/index*/
 for (i = 0; current != NULL; i++)
-{
+{ /*loop through list to find node/index*/
 if (i == idx)
 { /*match found-redo links / next and add int value*/
 prev->next = new;
