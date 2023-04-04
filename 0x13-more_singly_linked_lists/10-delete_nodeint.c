@@ -16,7 +16,12 @@ listint_t *current = *head, *temp;
 /*check if list is empty*/
 if (head == NULL)
 return (-1);
-
+if (index == 0)
+{
+*head = (*head)->next;
+free(current);
+return (1);
+}
 /*loop through*/
 for (i = 0; current->next != NULL; i++)
 {
