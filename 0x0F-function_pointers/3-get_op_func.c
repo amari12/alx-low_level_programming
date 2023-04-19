@@ -27,3 +27,4 @@ i++;
 }
 return (ops[i].f);
 }
+

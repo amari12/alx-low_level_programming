@@ -41,3 +41,4 @@ exit(100);
 printf("%d\n", get_op_func(o)(ia, ib));
 return (0);
 }
+
