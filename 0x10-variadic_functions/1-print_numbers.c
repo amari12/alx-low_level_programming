@@ -18,14 +18,13 @@ va_start(lst, n);
 
 for (i = 0; i < n; i++)
 {
-if (i == n - 1)
-printf("%d\n", va_arg(lst, int));
-else if (separator == NULL)
+/*print nr*/
 printf("%d", va_arg(lst, int));
-else
-printf("%d%s", va_arg(lst, int), separator);
+/*if not last nr*/
+if (i != n - 1 && separator != NULL)
+printf("%s", separator);
 }
+printf("\n");
 va_end(lst);
-
 }
 
