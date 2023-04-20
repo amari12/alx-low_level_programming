@@ -17,10 +17,12 @@ va_list lst;
 va_start(lst, format);
 i = 0;
 
+if (format)
+{
 while (format[i])
 {
 if (i == 0)
-sep = "";
+sep = ""; /*first round separator is empty - placed first*/
 
 switch (format[i])
 {
@@ -47,6 +49,7 @@ sep = ", ";
 i++;
 } /*while*/
 printf("\n");
+} /*end if*/
 va_end(lst);
 }
 
