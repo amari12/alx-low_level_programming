@@ -16,12 +16,11 @@ va_list lst;
 
 va_start(lst, format);
 i = 0;
+sep = ""; /*first round sep will be nothing - placed first*/
 if (format)
 {
 while (format[i])
 {
-if (i == 0)
-sep = ""; /*first round separator is empty - placed first*/
 switch (format[i])
 {
 case 'c':
