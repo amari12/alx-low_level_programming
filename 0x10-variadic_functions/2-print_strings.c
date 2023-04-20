@@ -24,11 +24,11 @@ s = va_arg(lst, char *);
 /*if no arguments*/
 if (s == NULL)
 printf("(nil)");
-/*if separator is empty*/
-if (separator == NULL)
-separator = "";
 
 printf("%s%s", lst, separator);
+/*separator*/
+if (i != n - 1 && separator != NULL)
+printf("%s", separator);
 } /*end for*/
 
 printf("\n");
