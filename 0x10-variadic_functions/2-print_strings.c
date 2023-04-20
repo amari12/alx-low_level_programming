@@ -21,16 +21,17 @@ va_start(lst, n);
 for (i = 0; i < n; i++)
 {
 s = va_arg(lst, char *);
+/*if no arguments*/
 if (s == NULL)
-s = "(nil)";
+printf("(nil)");
+/*if separator is empty*/
+if (separator == NULL)
+separator = "";
 
-if ((i != n - 1) && (separator))
-printf("%s%s", s, separator);
-else if ((i != n - 1) && (separator == NULL))
-printf("%s", s);
-else
-printf("%s\n", s);
-}
+printf("%s%s", lst, separator);
+} /*end for*/
 
+printf("\n");
+va_end(lst);
 }
 
