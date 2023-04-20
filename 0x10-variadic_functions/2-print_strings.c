@@ -24,7 +24,7 @@ s = va_arg(lst, char *);
 /*if no arguments*/
 if (s == NULL)
 printf("(nil)");
-
+else
 printf("%s", s);
 /*separator*/
 if (i != n - 1 && separator != NULL)
