@@ -16,8 +16,8 @@ int ia;
 int ib;
 char *o;
 
-if (argc > 4 || argc > 4)
-{
+if (argc > 4 || argc < 4)
+{ /*nr of arguments is wrong*/
 printf("Error\n");
 exit(98);
 }
@@ -26,14 +26,14 @@ ia = atoi(argv[1]);
 ib = atoi(argv[3]);
 o = argv[2];
 
-if (o == NULL || *o != '+' || *o != '-' || *o != '*' || *o != '/' || *o != '%')
-{
+if (get_op_func(o) == NULL)
+{ /*operator none of mentioned*/
 printf("Error\n");
 exit(99);
 }
 
-if ((*o == '/' || *o == '%') && (ib == 0))
-{
+if ((*o == '/' && ib == 0) || (*o == '%' && ib == 0))
+{ /*if divide or mod by zero*/
 printf("Error\n");
 exit(100);
 }
