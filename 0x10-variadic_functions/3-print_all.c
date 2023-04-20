@@ -45,8 +45,8 @@ continue;
 sep = ", ";
 i++;
 } /*while*/
-printf("\n");
 } /*end if*/
+printf("\n");
 va_end(lst);
 }
 
