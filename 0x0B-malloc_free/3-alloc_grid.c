@@ -17,11 +17,11 @@ int **arr;
 /*check if height/width is zero*/
 if (width == 0 || height == 0)
 return (NULL);
-arr = (int **)malloc(height * sizeof(int));
+arr = malloc(height * sizeof(int));
 for (row = 0; row < height; row++)
 {
 /*assign each row /1D array a pointer?*/
-arr[row] = (int *)malloc(width * sizeof(int));
+arr[row] = malloc(width * sizeof(int));
 if (arr[row] == NULL)
 {
 	for (i = 0; i < row; i++)
