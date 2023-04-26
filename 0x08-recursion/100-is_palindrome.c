@@ -1,5 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 
 /**
  * is_palindrome - checks if a string is a palindrome
@@ -9,25 +11,27 @@
 
 int is_palindrome(char *s)
 {
-	int i = 0, len = 0, is_pal = 1;
+	int len = 0, is_pal = 1;
+	char *str;
 
-	if (s == NULL)
+	if (*s == '\0')
 		return (1); /*empty string is a palindrome*/
+	str = strdup(s); /*make copy of s*/
+	len = strlen(s);
 
-	while (s[i] != '\0')
-	{ /*get length*/
-		len += 1;
-		i++;
+	if (str[0] != str[(len - 1)]) /*compare first and last*/
+	{ /*does not match*/
+		is_pal = 0;
+		free(str);
+		return (0);
 	}
-
-	for (i = 0; i < len / 2; i++) /*only check until halfway*/
+	else
 	{
-		if (s[i] != s[(len - 1) - i])
-		{ /*does not match*/
-			is_pal = 0;
-			return (0);
-		}
+		str[len - 1] = '\0'; /*remove last char*/
+		is_pal = is_palindrome(str + 1); /*next round will start at next char*/
+		str[len - 1] = s[len - 1]; /*restor last char*/
 	}
+	free(str);
 	return (is_pal);
 }
 
