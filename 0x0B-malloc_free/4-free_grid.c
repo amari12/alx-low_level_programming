@@ -6,15 +6,15 @@
  *free_grid - frees 2d grid created in alloc_grid
  *@grid: grid from alloc_grid
  *@height: height/rows
- *Return: void
+ *Return: int
  */
 
-void free_grid(int **grid, int height)
+int free_grid(int **grid, int height)
 {
 int i;
 
 if (grid == NULL || height == 0)
-return;
+return (1);
 
 for (i = 0; i < height; i++)
 {
@@ -22,4 +22,6 @@ free(grid[i]);
 }
 free(grid);
 grid = NULL; /*free pointer*/
+return (0);
 }
+
