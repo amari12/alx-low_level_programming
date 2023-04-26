@@ -18,8 +18,6 @@ int **arr;
 if (width == 0 || height == 0)
 return (NULL);
 arr = (int **)malloc(height * sizeof(int));
-if (arr)
-{/*check if it worked then initialise with 0s*/
 for (row = 0; row < height; row++)
 {
 /*assign each row /1D array a pointer?*/
@@ -37,9 +35,5 @@ arr[row][col] = 0;
 }
 }
 return (arr);
-}
-else
-{/*return null on failure*/
-return (NULL);
 }
 }
