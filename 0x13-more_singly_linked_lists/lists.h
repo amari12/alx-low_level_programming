@@ -12,7 +12,7 @@
 typedef struct listint_i
 {
 	int n;
-	stuct listint_i *next;
+	struct listint_i *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
