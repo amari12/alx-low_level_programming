@@ -23,7 +23,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	/*assign value*/
 	new->n = n;
 	/*check if list is empty or if idx is 0*/
-	if (*head == NULL && idx == 0)
+	if ((*head == NULL || head == NULL) && idx == 0)
 	{
 		*head = new;
 		return (new);
