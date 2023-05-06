@@ -14,7 +14,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int nr = 0;
 
 	/*checks*/
-	if (b == NULL || *b == NULL)
+	if (b == NULL)
 	{
 		return (0);
 	}
@@ -23,9 +23,11 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != 1 || b[i] != 0)
 			return (0);
+		nr = (nr << 1) + (b[i] + '0'); /*convert*/
 	}
 	/*convert*/
-	nr = strtoul(b, NULL, 2);
+	/*nr = strtoul(b, NULL, 2);*/
+	
 	return (nr);
 }
 
