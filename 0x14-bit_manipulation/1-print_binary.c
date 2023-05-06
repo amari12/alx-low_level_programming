@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	if (n > 1)
 		print_binary(n >> 1);
 	/*gives nr without left digit*/
-	
+
 	/* &: bitwise operator*/
 	/* compares least significant bit of n*/
 	/*aka last digit of binary value*/
