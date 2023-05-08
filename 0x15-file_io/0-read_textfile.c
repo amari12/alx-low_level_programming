@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <stdlib.h>
 #include <stddef.h>
 
 /**
@@ -17,28 +16,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t r_count = 0, w_count = 0;
 	FILE *file;
-	char *content = malloc(letters + 1);
+	char *content;
 
-	/*check if filename is not empty*/
-	if (filename == NULL)
+	if (filename == NULL) /*check filename not empty*/
 		return (0);
-
-	/*open file*/
-	file = fopen(filename, "r");
-	/*was not able to open file*/
-	if (file == NULL)
+	file = fopen(filename, "r"); /*open file*/
+	if (file == NULL) /*not able to open file*/
 		return (0);
-
-	/*save buffer*/
-	content = malloc(letters + 1);
+	content = malloc(letters + 1); /*save memory*/
 	if (content == NULL)
 	{
 		fclose(file);
 		return (0);
 	}
-
-	/*read file*/
-	r_count = fread(content, sizeof(char), letters, file);
+	r_count = fread(content, sizeof(char), letters, file); /*read file*/
 	if (r_count == 0) /*could not read file*/
 	{
 		fclose(file);
@@ -46,21 +37,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	content[r_count] = '\0';
-
-	/*write file*/
-	w_count = write(STDOUT_FILENO, content, r_count);
-
-	/*if letters read != letters written*/
+	w_count = write(STDOUT_FILENO, content, r_count); /*write file*/
 	if (r_count != w_count)
 	{
 		fclose(file);
 		free(content);
 		return (0);
 	}
-
 	free(content);
-	/*close file*/
-	fclose(file);
+	fclose(file); /*close file*/
 	return (r_count);
 }
 
